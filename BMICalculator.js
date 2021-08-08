@@ -5,6 +5,7 @@
 'use strict';
 
 function compute(inputJSON) {
+    try{
     var p = [];
     var inputData = new Map();
     var count = 0;
@@ -64,6 +65,9 @@ function compute(inputJSON) {
             count++;
     }
     return count;
+}catch(err){
+    console.error(err);
+}
 }
 
 var inputJSON = [{
